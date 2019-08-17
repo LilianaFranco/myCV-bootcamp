@@ -26,8 +26,8 @@ let about = document.getElementById("about");
 let getAbout = document.getElementById("getAbout");
 let resume = document.getElementById("resume");
 let getResume = document.getElementById("getResume");
-let works = document.getElementById("works");
-let getWorks = document.getElementById("getWorks");
+let courses = document.getElementById("courses");
+let getCourses = document.getElementById("getCourses");
 let blog = document.getElementById("blog");
 let getBlog = document.getElementById("getBlog");
 let contact = document.getElementById("contact");
@@ -38,8 +38,8 @@ function remove() {
     getAbout.classList.remove('selected');
     resume.classList.remove('view');
     getResume.classList.remove('selected');
-    works.classList.remove('view');
-    getWorks.classList.remove('selected');
+    courses.classList.remove('view');
+    getCourses.classList.remove('selected');
     blog.classList.remove('view');
     getBlog.classList.remove('selected');
     contact.classList.remove('view');
@@ -63,12 +63,12 @@ getResume.addEventListener('click', function (e) {
         getResume.classList.add('selected');
     }
 })
-getWorks.addEventListener('click', function (e) {
+getCourses.addEventListener('click', function (e) {
     if (window.innerWidth > 1040) {
         e.preventDefault();
         remove();
-        works.classList.add('view');
-        getWorks.classList.add('selected');
+        courses.classList.add('view');
+        getCourses.classList.add('selected');
     }
 })
 getBlog.addEventListener('click', function (e) {

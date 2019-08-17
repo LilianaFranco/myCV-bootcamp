@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
+    background: linear-gradient(to bottom right, #F2CD13 0%, #F27405 100%);
     padding: 0;
     margin: 0;
     border: none;
@@ -19,8 +19,8 @@ a{
 
 
 .background.gradient {
-    background: #50a3a2;
-    background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
+    background: #F2CD13;
+    background: linear-gradient(to bottom right, #F2CD13 0%, #F27405 100%);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -170,7 +170,7 @@ input:focus, textarea:focus, button:focus {
     top: 0;
     width: 30px;
     height: 30px;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    background: linear-gradient(135deg, rgba(217, 232, 245, 1) 10%, rgba(242, 242, 242, 1) 100%);
     z-index: -1;
     border-radius: 30px;
 }
@@ -182,7 +182,7 @@ input:focus, textarea:focus, button:focus {
     bottom: -15px;
     width: 95%;
     height: 1px;
-    background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at left, rgba(217, 232, 245, 1) 10%, rgba(242, 242, 242, 1) 70%);
 }
 
 .line-left{
@@ -195,7 +195,7 @@ input:focus, textarea:focus, button:focus {
     top: 0;
     width: 1px;
     height: 100%;
-    background: radial-gradient(ellipse at top, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at top, rgba(217, 232, 245, 1) 10%, rgba(242, 242, 242, 1) 70%);
 }
 
 .line-down{
@@ -261,14 +261,14 @@ header nav a .link{
 }
 
 header nav a:hover {
-    color: #2eca7f;
+    color: #0597f2;
 }
 
 main{
     margin-top: 88px;
 }
 
-main .profile, main .about, main .resume, main .works, main .blog, main .contact{
+main .profile, main .about, main .resume, main .courses, main .blog, main .contact{
     box-sizing: border-box;
     position: relative;
     background: #ffffff;
@@ -279,7 +279,7 @@ main .profile, main .about, main .resume, main .works, main .blog, main .contact
     margin: 0 auto;
 }
 
-main .about, main .resume, main .works, main .blog, main .contact{
+main .about, main .resume, main .courses, main .blog, main .contact{
     padding: 30px 20px 30px 20px;
     margin-top: 15px;
 }
@@ -341,40 +341,40 @@ main .profile{
     left: calc(50% - 78px);
     width: 134px;
     height: 134px;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    background: linear-gradient(135deg, rgba(217, 232, 245, 1) 10%, rgba(242, 242, 242, 1) 100%);
     border-radius: 100%;
 }
 
 .profile-name{
     font-size: 32px;
     color: #171717;
-    line-height: 32px;
+    line-height: 26px;
     font-weight: 400;
     margin: 0 auto 0 auto;
 }
 
 .profile-profession{
-    font-size: 14px;
-    color: #2eca7f;
+    font-size: 18px;
+    color: #072BF2;
     line-height: 14px;
     font-weight: 400;
 }
 
 .profile-social a{
     transition: color 0.3s ease 0s;
-    margin: 0 6px;
-    font-size: 16px;
+    margin: 6px 10px 6px 10px;
+    font-size: 22px;
 }
 
 .profile-social a:hover{
     text-decoration: none;
-    color: #2eca7f;
+    color: #072BF2;
 }
 
 .profile-buttons{
     position: relative;
     display: flex;
-    margin-top: 58px;
+    margin-top: 40px;
 }
 .profile-buttons::before{
     content: '';
@@ -395,7 +395,7 @@ main .profile{
     justify-content: center;
     transition: color 0.3s ease;
     line-height: 70px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     color: #171717;
 }
@@ -403,7 +403,7 @@ main .profile{
 
 
 .profile-buttons a:hover{
-    color: #2eca7f;
+    color: #072BF2;
 }
 
 .profile-buttons a:first-child::before, .profile-buttons a:first-child::after{
@@ -427,8 +427,6 @@ main .profile{
 
 }
 
-
-
 .about-aboutMe > div > div{
     display: flex;
     flex-wrap: wrap;
@@ -444,21 +442,20 @@ main .profile{
     font-size: 13px;
 }
 
-
 .about-aboutMe p{
     text-align: left;
 }
 
-.about-services{
+.soft-skills{
     margin-top: 50px;
 }
 
-.about-services >div{
+.soft-skills >div{
    display: flex;
    flex-wrap: wrap;
    position: relative;
 }
-.about-services >div:after{
+.soft-skills >div:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -468,7 +465,7 @@ main .profile{
     background: radial-gradient(ellipse at top, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
-.about-services article{
+.soft-skills article{
     position: relative;
     width: 50%;
     text-align: left;
@@ -476,43 +473,43 @@ main .profile{
     box-sizing: border-box;
 }
 
-.about-services article .fas{
+.soft-skills article .fas{
     margin: 0;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     text-align: center;
-    font-size: 32px;
-    color: #2eca7f;
-    background: linear-gradient(135deg, rgba(46, 202, 127, 0.4) 0%, rgba(46, 202, 127, 0.01) 100%);
+    font-size: 28px;
+    color: #072bf2;
+    background: linear-gradient(135deg, rgba(217, 232, 245, 1) 10%, rgba(242, 242, 242, 1) 100%);
     border-radius: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.about-services article h4{
+.soft-skills article h4{
     font-size: 13px;
     color: #171717;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.about-services article p{
+.soft-skills article p{
     font-size: 14px;
     line-height: 1.6;
     padding: 0;
 }
 
-.about-pricing{
+.soft-skills{
     margin-top: 30px;
 }
 
-.about-pricing .disabled{
+.soft-skills .disabled{
     text-decoration: line-through;
     opacity: 0.6;
 }
 
-.about-pricing .new{
+.soft-skills .new{
     margin: 0 0 0 5px;
     padding: 0 5px;
     display: inline-block;
@@ -524,88 +521,31 @@ main .profile{
     border-radius: 2px;
 }
 
-
-.about-pricing > div{
+.soft-skills > div{
     display: flex;
 }
 
-.about-pricing > div > div{
+.soft-skills > div > div{
     width:50%;
 }
 
-.about-pricing > div > div > div{ 
+.soft-skills > div > div > div{ 
     padding: 25px 0px;
 }
 
-.about-pricing > div > div > div > div{
+.soft-skills > div > div > div > div{
     padding: 5px 0;
     font-size: 14px;
     color: #171717;
 }
 
-.about-pricing .amount{
-    margin: 15px 0 25px 0;
-}
-
-.about-pricing .dollar{
-    margin: 0 3px;
-    position: relative;
-    bottom: 7px;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 17px;
-    font-weight: 400;
-    color: #171717;
-}
-
-.about-pricing .number{
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 42px;
-    line-height: 26px;
-    font-weight: 500;
-    color: #171717;
-}
-
-.about-pricing .period{
-    bottom: auto;
-    top: 7px;
-    vertical-align: bottom;
-    font-size: 13px;
-    color: #626262;
-    position: relative;
-    margin-left: 7px;
-}
-
-.about-pricing .icon{
+.soft-skills .icon{
     margin: 0 auto;
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 32px;
-    color: #2eca7f;
-}
-
-.about-pricing a{
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 70px;
-    line-height: 70px;
-    font-size: 12px;
-    color: #171717;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-    border: none;
-}
-
-.about-pricing a:hover{
-    color: #2eca7f;
+    color: #072bf2;
 }
 
 .about-fun{
@@ -632,24 +572,7 @@ main .profile{
     height: 43px;
     text-align: center;
     font-size: 26px;
-    color: #2eca7f;
-}
-
-.about-clients{
-    margin-top: 50px;
-}
-
-.about-clients .images{
-    display: flex;
-}
-
-.about-clients .images a{
-    width: 25%;
-    padding: 18px;
-}
-.about-clients .images img{
-    max-width: 100%;
-    opacity: 0.4;
+    color: #072bf2;
 }
 
 .resume-lines{
@@ -674,7 +597,7 @@ main .profile{
     width: 40px;
     height: 40px;
     font-size: 26px;
-    color: #2eca7f;
+    color: #072bf2;
 }
 
 .resume-line{
@@ -693,7 +616,7 @@ main .profile{
     display: inline-block;
     font-size: 11px;
     line-height: 18px;
-    color: #d8dbe2;
+    color: #072bf2;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 4px;
@@ -715,11 +638,11 @@ main .profile{
 }
 
 .resume-line .date.active{
-    color: #2eca7f;
+    color: #072bf2;
 }
 
 .resume-line .date.active::before{
-    background: #2eca7f;
+    background: #072bf2;
 }
 
 .resume-line .name{
@@ -757,7 +680,7 @@ main .profile{
     margin: 0 0 8px 0;
     font-size: 14px;
     line-height: 14px;
-    color: #626262;
+    color: #072bf2;
     text-align: left;
 }
 
@@ -768,7 +691,7 @@ main .profile{
 }
 
 .resume-skills > div section > div > div > div{
-    background: #2eca7f;
+    background: #072bf2;
     height: 4px;
 }
 
@@ -790,51 +713,51 @@ main .profile{
     width: 40px;
     height: 40px;
     font-size: 26px;
-    color: #2eca7f;
+    color: #072bf2;
 }
 
-.works-header{
+.courses-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.works-header ul{
+.courses-header ul{
     display: flex;
     list-style: none;
     padding: 0;
     padding-bottom: 17px;
 }
 
-.works-header h3::after{
+.courses-header h3::after{
     content: '';
     position: absolute;
     left: -40px;
     bottom: -27px;
     width: 400%;
     height: 1px;
-    background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at left, rgba(217, 232, 245, 1) 0%, rgba(242, 242, 242, 0) 70%);
 }
 
-.works-header ul li{
+.courses-header ul li{
     margin: 0 5px;
     cursor: pointer;
 }
 
-.works-content{
+.courses-content{
     display: flex;
     flex-wrap: wrap;
 }
 
-.works-content > div{
+.courses-content > div{
     width: 50%;
 }
 
-.works-content > div > div{
+.courses-content > div > div{
     padding:18px;
 }
 
-.works-content > div > div h4{
+.courses-content > div > div h4{
     padding: 0 0 2px 0;
     display: block;
     font-size: 13px;
@@ -845,7 +768,7 @@ main .profile{
     margin: 0 auto;
 }
 
-.works-content > div > div h5{
+.courses-content > div > div h5{
     margin: 0;
     font-size: 11px;
     color: #999999;
@@ -853,7 +776,7 @@ main .profile{
     text-transform: uppercase;
 }
 
-.works-content img{
+.courses-content img{
     width: 100%;
 }
 
@@ -957,7 +880,7 @@ main .contact{
 }
 
 .contact-form button:hover {
-    color: #2eca7f;
+    color: #072bf2;
 }
 
 @media only screen and (min-width: 540px){
@@ -968,7 +891,7 @@ main .contact{
 
 @media only screen and (min-width: 1040px) {
     .selected{
-        color: #2eca7f;
+        color: #072bf2;
     }
     .page{
         position: absolute;
@@ -1006,7 +929,7 @@ main .contact{
         width: 1020px;
     }
 
-    main .about, main .resume, main .works, main .blog, main .contact {
+    main .about, main .resume, main .courses, main .blog, main .contact {
         width: 0;
         height: 0;
         opacity: 0;

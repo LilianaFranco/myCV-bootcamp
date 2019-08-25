@@ -1,7 +1,7 @@
 
 data = {
     id:5,
-    name:"juan"
+    name:"Lili"
 }
 
 fetch("https://randomuser.me/api/",{
@@ -20,8 +20,6 @@ fetch("https://randomuser.me/api/",{
     nombre.innerHTML = value.name.title + " " + value.name.first + " " + value.name.last;
 })
 
-
-
 let about = document.getElementById("about");
 let getAbout = document.getElementById("getAbout");
 let resume = document.getElementById("resume");
@@ -32,6 +30,9 @@ let blog = document.getElementById("blog");
 let getBlog = document.getElementById("getBlog");
 let contact = document.getElementById("contact");
 let getContact = document.getElementById("getContact");
+let modal = document.getElementById("#myModal");
+let Openmodal = document.getElementById("#openModal");
+let span = document.getElementsByClassName("close")[0];
 
 function remove() {
     about.classList.remove('view');
@@ -44,6 +45,7 @@ function remove() {
     getBlog.classList.remove('selected');
     contact.classList.remove('view');
     getContact.classList.remove('selected');
+    
 }
 
 getAbout.addEventListener('click', function (e) {
@@ -69,6 +71,7 @@ getCourses.addEventListener('click', function (e) {
         remove();
         courses.classList.add('view');
         getCourses.classList.add('selected');
+    
     }
 })
 getBlog.addEventListener('click', function (e) {
@@ -89,6 +92,7 @@ getContact.addEventListener('click', function (e) {
 
 })
 
+
 var email = document.getElementById("email");
 var form = document.getElementById("form");
 
@@ -103,3 +107,19 @@ email.addEventListener("input", function (event) {
 form.addEventListener("submit", function (event) {
     event.preventDefault();
   });
+
+/*
+  Openmodal.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+
+*/

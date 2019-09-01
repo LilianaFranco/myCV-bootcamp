@@ -795,6 +795,11 @@ main .profile{
     border: 1px solid black;
 }
 
+.modalOn{
+    display: block;
+}
+
+
 .modal-content {
   background-color:white;
   margin: 15% auto; /* 15% from the top and centered */
@@ -808,7 +813,7 @@ main .profile{
     top:0;
     right:0;
 }
-
+}
 .close:focus {
     color: black;
     text-decoration: none;

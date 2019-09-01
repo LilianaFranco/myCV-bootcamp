@@ -4,22 +4,6 @@ data = {
     name:"Lili"
 }
 
-fetch("https://randomuser.me/api/",{
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    headers: {
-        "Content-Type": "application/json",
-        // "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
-}).then((value) =>{
-    return value.json();
-}).then((value) => {
-    return value.results[0]
-}).then((value) => {
-    let nombre = document.getElementById("nombre");
-    nombre.innerHTML = value.name.title + " " + value.name.first + " " + value.name.last;
-})
-
 let about = document.getElementById("about");
 let getAbout = document.getElementById("getAbout");
 let resume = document.getElementById("resume");
@@ -30,9 +14,9 @@ let blog = document.getElementById("blog");
 let getBlog = document.getElementById("getBlog");
 let contact = document.getElementById("contact");
 let getContact = document.getElementById("getContact");
-let modal = document.getElementById("#myModal");
-let Openmodal = document.getElementById("#openModal");
-let span = document.getElementsByClassName("close")[0];
+let openModal = document.getElementById("openModal");
+let myModal = document.getElementById("myModal");
+let closeModal = document.getElementById("close");
 
 function remove() {
     about.classList.remove('view');
@@ -57,6 +41,7 @@ getAbout.addEventListener('click', function (e) {
     }
 
 });
+
 getResume.addEventListener('click', function (e) {
     if (window.innerWidth > 1040) {
         e.preventDefault();
@@ -108,18 +93,14 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
   });
 
-/*
-  Openmodal.onclick = function() {
-    modal.style.display = "block";
+  openModal.addEventListener("click", openModalFuntion);
+
+  function openModalFuntion(event){
+      myModal.classList.add("modalOn")
   }
+  
+  closeModal.addEventListener("click", closeModalFuntion);
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-
-*/
+  function closeModalFuntion(event){
+    myModal.classList.remove("modalOn")
+}

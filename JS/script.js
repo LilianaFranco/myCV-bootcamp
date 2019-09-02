@@ -14,9 +14,10 @@ let blog = document.getElementById("blog");
 let getBlog = document.getElementById("getBlog");
 let contact = document.getElementById("contact");
 let getContact = document.getElementById("getContact");
-let openModal = document.getElementById("openModal");
+let openModal = document.querySelector("#courses");
 let myModal = document.getElementById("myModal");
 let closeModal = document.getElementById("close");
+let imgModal = document.getElementById("imgModal");
 
 function remove() {
     about.classList.remove('view');
@@ -89,14 +90,20 @@ email.addEventListener("input", function (event) {
   }
 });
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function (event){
     event.preventDefault();
   });
 
   openModal.addEventListener("click", openModalFuntion);
 
   function openModalFuntion(event){
-      myModal.classList.add("modalOn")
+      if (event.target.localName == "img"){
+        let imagePath = event.target.currentSrc
+        imagePath = `.${imagePath.substring(imagePath.indexOf("/img/"))}`
+        console.log(imagePath)
+        imgModal.src = imagePath
+        myModal.classList.add("modalOn")
+    }
   }
   
   closeModal.addEventListener("click", closeModalFuntion);
